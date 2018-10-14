@@ -1,4 +1,4 @@
-ws-server-springboot: 
+<strong>ws-server-springboot:</strong>
 使用maven插件
 <pre>
 &lt;plugin>
@@ -24,12 +24,12 @@ ws-server-springboot:
             &lt;/plugin&gt;
 </pre>
 这个项目使用了JAXB生成java代码，通过Springboot配置webservice来提供webservice服务，
-使用时只需要启动WsServerSpringbootApplication即可。
+使用时只需要启动<strong>WsServerSpringbootApplication</strong>即可。
 
-Webservice-server:
+<strong>Webservice-server:</strong>
 这个项目是原生的模拟webservice服务端
 
-Webservice-client:
+<strong>Webservice-client:</strong>
 这个项目模拟的是webservice客户端， 使用maven插件jaxws-maven-plugin，通过
 配置wsdl 远程地址即可在客户端生成服务器端的entity和service代码
 <pre>
