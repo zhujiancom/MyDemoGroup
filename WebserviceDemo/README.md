@@ -1,5 +1,4 @@
-<strong>ws-server-springboot:</strong>
-使用maven插件
+<strong><code><font size=6>ws-server-springboot:</font></code></strong>
 <pre>
 &lt;plugin>
                 &lt;groupId>org.codehaus.mojo&lt;/groupId>
@@ -23,13 +22,13 @@
                 &lt;/configuration>
             &lt;/plugin>
 </pre>
-这个项目使用了JAXB生成java代码，通过Springboot配置webservice来提供webservice服务，
+这个项目使用了JAXB maven 插件生成java代码，通过Springboot配置webservice来提供webservice服务，
 使用时只需要启动<strong>WsServerSpringbootApplication</strong>即可。
 
-<strong>Webservice-server:</strong>
+<strong><code><font size=6>Webservice-server:</font></code></strong>
 这个项目是原生的模拟webservice服务端
 
-<strong>Webservice-client:</strong>
+<strong><code><font size=6>Webservice-client:</font></code></strong>
 这个项目模拟的是webservice客户端， 使用maven插件jaxws-maven-plugin，通过
 配置wsdl 远程地址即可在客户端生成服务器端的entity和service代码
 <pre>
@@ -38,7 +37,7 @@
         &lt;artifactId>jaxws-maven-plugin&lt;/artifactId>
         &lt;version>2.5&lt;/version>
         &lt;configuration>
-            &lt;!--<wsdlDirectory>${basedir}/src/main/resources/wsdl</wsdlDirectory>-->
+            &lt;!--&lt;wsdlDirectory>${basedir}/src/main/resources/wsdl&lt;/wsdlDirectory>-->
             <strong>&lt;wsdlUrls>http://localhost:8888/ws/person?wsdl,http://localhost:8080/ws/students.wsdl&lt;/wsdlUrls></strong>
             &lt;packageName>com.zj.demo.ws&lt;/packageName>
             &lt;destDir>${basedir}/target/classes&lt;/destDir>
