@@ -20,8 +20,8 @@
                     &lt;<strong>sources</strong>&gt; &lt;!-- 对于2.2版本插件，需要使用sources标签来指定xsd所在的位置 -->
                         &lt;<font color="#DC143C">source</font>&gt;${project.basedir}/src/main/resources/xsd/**&lt;/source>**
                     &lt;<strong>/sources</strong>&gt;
-                &lt;/configuration&gt;
-            &lt;/plugin&gt;
+                &lt;/configuration>
+            &lt;/plugin>
 </pre>
 这个项目使用了JAXB生成java代码，通过Springboot配置webservice来提供webservice服务，
 使用时只需要启动<strong>WsServerSpringbootApplication</strong>即可。
@@ -33,5 +33,24 @@
 这个项目模拟的是webservice客户端， 使用maven插件jaxws-maven-plugin，通过
 配置wsdl 远程地址即可在客户端生成服务器端的entity和service代码
 <pre>
-&lt;wsdlUrls&gt;http://localhost:8888/ws/person?wsdl,http://localhost:8080/ws/students.wsdl&lt;/wsdlUrls&gt;    
+    &lt;plugin>
+        &lt;groupId>org.codehaus.mojo&lt;/groupId>
+        &lt;artifactId>jaxws-maven-plugin&lt;/artifactId>
+        &lt;version>2.5&lt;/version>
+        &lt;configuration>
+            &lt;!--<wsdlDirectory>${basedir}/src/main/resources/wsdl</wsdlDirectory>-->
+            <strong>&lt;wsdlUrls>http://localhost:8888/ws/person?wsdl,http://localhost:8080/ws/students.wsdl&lt;/wsdlUrls></strong>
+            &lt;packageName>com.zj.demo.ws&lt;/packageName>
+            &lt;destDir>${basedir}/target/classes&lt;/destDir>
+            &lt;keep>true&lt;/keep>
+            &lt;sourceDestDir>${basedir}/target/generated-sources&lt;/sourceDestDir>
+        &lt;/configuration>
+        &lt;executions>
+            &lt;execution>
+                &lt;goals>
+                    &lt;goal>wsimport&lt;/goal>
+                &lt;/goals>
+            &lt;/execution>
+        &lt;/executions>
+    &lt;/plugin>
 </pre>
