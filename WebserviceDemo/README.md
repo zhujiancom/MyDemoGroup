@@ -18,7 +18,7 @@ ws-server-springboot:
                     &lt;outputDirectory>${basedir}/target/generated-sources/jaxb&lt;/outputDirectory&gt;
                     &lt;clearOutputDir>false&lt;/clearOutputDir>
                     &lt;<strong>sources</strong>&gt; &lt;!-- 对于2.2版本插件，需要使用sources标签来指定xsd所在的位置 -->
-                        **&lt;source&gt**;${project.basedir}/src/main/resources/xsd/**&lt;/source>**
+                        &lt;<font color="#DC143C">source</font>&gt;${project.basedir}/src/main/resources/xsd/**&lt;/source>**
                     &lt;<strong>/sources</strong>&gt;
                 &lt;/configuration&gt;
             &lt;/plugin&gt;
