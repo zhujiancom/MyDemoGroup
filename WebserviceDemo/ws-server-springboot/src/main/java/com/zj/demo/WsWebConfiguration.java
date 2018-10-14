@@ -20,20 +20,6 @@ import org.springframework.xml.xsd.XsdSchema;
 @Configuration
 @EnableWs
 public class WsWebConfiguration {
-//    @Bean
-//    public ServletRegistrationBean jaxwsServlet(){
-//        ServletRegistrationBean registration = new ServletRegistrationBean(new WSServlet());
-//        registration.setName("JAXWSServlet");
-//        registration.addUrlMappings("/personWS");
-//        return registration;
-//    }
-//
-//    @Bean
-//    public ServletListenerRegistrationBean wsServletContextListener(){
-//        ServletListenerRegistrationBean listenerRegistrationBean = new ServletListenerRegistrationBean(new WSServletContextListener());
-//        return listenerRegistrationBean;
-//    }
-
     @Bean
     public ServletRegistrationBean messageDispatcherServlet(ApplicationContext context) {
         MessageDispatcherServlet messageDispatcherServlet = new MessageDispatcherServlet();
