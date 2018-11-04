@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  batch:
+    job:
+      enabled: true
+  datasource:
+    platform: h2
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 123456
+  jpa:
+    show-sql: true
+    database: h2
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true  #允许远程访问Web Console
+      path: /h2-console   #h2 web控制台路径
+
