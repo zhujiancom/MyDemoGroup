@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: demo-encryptor
+jasypt:
+  encryptor:
+    password: c38fa81de411b40cbf8de95347c44c930468a8a98bf7deb3
